@@ -1,11 +1,10 @@
-﻿using Robust.Shared.GameStates;
+﻿using Robust.Shared.Containers;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared._Citadel.CryoStorage;
 
-/// <summary>
-/// This is used for cryogenic storage, namely as a latejoin spawn point and a way to leave the round long-term.
-/// </summary>
-public abstract class CryoStorageComponent : Component
+public abstract class SharedCryoStorageComponent : Component
 {
-
+    [DataField("bodyContainerId")]
+    public string BodyContainerId = "cryostorage-bodyContainer";
 }
